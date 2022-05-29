@@ -24,3 +24,13 @@ def search_results(request):
         message = "You haven't searched for any term"
         return render(request, 'search.html',{"message":message})
 
+def image(request,image_id):
+    try:
+        image = Image.objects.get(id = image_id)
+    except:
+        raise Http404()
+    return render(request,"photo.html", {"image":image})
+
+def location(request,pin):
+    images = Image.filter_by_location(pin)
+    return render(request, 'location.html', {'results':images})
