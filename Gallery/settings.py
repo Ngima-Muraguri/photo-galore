@@ -33,7 +33,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'galore.apps.GaloreConfig',
-    'bootstrap',
+    
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
