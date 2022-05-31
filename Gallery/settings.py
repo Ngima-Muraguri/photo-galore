@@ -87,6 +87,19 @@ DATABASES = {
     }
 }
 
+# adding config
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
+
+
+cloudinary.config( 
+  cloud_name = "ngima", 
+  api_key = "982418546954976", 
+  api_secret = "4J3eBMlMoytA4hpz2TMfgxPm-lQ" 
+)
+
+
 
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
